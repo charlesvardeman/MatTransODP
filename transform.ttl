@@ -1,0 +1,38 @@
+# filename: transform.ttl
+
+@prefix tran: <http://learningsparql.com/ns/addressbook#> .
+
+tran:transform1 tran:input_material_1 "water" ;
+				tran:material_id_1 "id" ;
+				tran:input_material_2 "dirt" ;
+				tran:material_id_2 "id" ;
+				tran:output_material_1 "mud" ;
+				tran:material_id_3 "id" ;
+				
+				# Or are all of the below part of every type of transformation?
+				# Source and amount data from other material file via given id(s)?
+				
+tran:input_material tran:units "data" ;
+					tran:amount "data" ;
+					tran:source "data" ;
+
+tran:energy_input tran:units "data" ;
+					tran:amount "data" ;
+					tran:source "data" ;
+					
+tran:material_output tran:units "data" ;
+					tran:amount "data" ;
+					tran:destination "data" ;
+					
+tran:air_emissions tran:units "data" ;
+					tran:amount "data" ;
+					tran:destination "data" ;
+
+tran:water_emissions tran:units "data" ;
+					tran:amount "data" ;
+					tran:destination "data" ;
+				
+tran:other_releases tran:units "data" ;
+					tran:amount "data" ;
+					tran:destination "data" ;
+				

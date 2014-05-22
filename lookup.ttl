@@ -1,0 +1,70 @@
+# filename: material.ttl
+
+@prefix lookup: <http://learningsparql.com/ns/addressbook#> .
+@prefix neighborhood: <http://learningsparql.com/ns/addressbook#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d:   <http://learningsparql.com/ns/data#> .
+
+lookup:SolarHeatGainCoeff lookup:unit  "Fraction" ;
+					      lookup:solarIncidentAngle _:solarAngle ;
+					 
+_:solarAngle lookup:0  "0.86"^^xsd:decimal ;
+			 lookup:40 "0.84"^^xsd:decimal ;
+			 lookup:50 "0.82"^^xsd:decimal ;
+			 lookup:60 "0.78"^^xsd:decimal ;
+			 lookup:70 "0.67"^^xsd:decimal ;
+			 lookup:80 "0.42"^^xsd:decimal ;
+			 
+			 
+			 
+neighborhood:1  neighborhood:name "Washington DC" ;
+			    neighborhood:latitude "38.98"^^xsd:decimal ;
+				neighborhood:longtitude "-77.47"^^xsd:decimal ;
+				neighborhood:region "40"^^xsd:decimal ;
+				neighborhood:region_units "miles" ;
+				
+neighborhood:2  neighborhood:name "San Francisco" ;
+			    neighborhood:latitude "37.62"^^xsd:decimal ;
+				neighborhood:longtitude "-122.40"^^xsd:decimal ;
+				neighborhood:region "40"^^xsd:decimal ;
+				neighborhood:region_units "miles" ;
+				
+neighborhood:3  neighborhood:name "Golden" ;
+			    neighborhood:latitude "39.74"^^xsd:decimal ;
+				neighborhood:longtitude "-105.18"^^xsd:decimal ;
+				neighborhood:region "40"^^xsd:decimal ;
+				neighborhood:region_units "miles" ;
+				
+neighborhood:4  neighborhood:name "Miami" ;
+			    neighborhood:latitude "25.82"^^xsd:decimal ;
+				neighborhood:longtitude "-80.30"^^xsd:decimal ;
+				neighborhood:region "40"^^xsd:decimal ;
+				neighborhood:region_units "miles" ;				
+				
+neighborhood:5  neighborhood:name "Tampa" ;
+			    neighborhood:latitude "27.97"^^xsd:decimal ;
+				neighborhood:longtitude "-82.53"^^xsd:decimal ;
+				neighborhood:region "40"^^xsd:decimal ;
+				neighborhood:region_units "miles" ;				
+				
+neighborhood:6  neighborhood:name "Molokai" ;
+			    neighborhood:latitude "21.15"^^xsd:decimal ;
+				neighborhood:longtitude "-157.10"^^xsd:decimal ;
+				neighborhood:region "40"^^xsd:decimal ;
+				neighborhood:region_units "miles" ;				
+				
+neighborhood:3  neighborhood:name "Chicago" ;
+			    neighborhood:latitude "41.98"^^xsd:decimal ;
+				neighborhood:longtitude "-87.92"^^xsd:decimal ;
+				neighborhood:region "40"^^xsd:decimal ;
+				neighborhood:region_units "miles" ;				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

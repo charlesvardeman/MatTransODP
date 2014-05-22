@@ -1,0 +1,30 @@
+# filename: trajectory.ttl
+
+@prefix traj: <http://learningsparql.com/ns/addressbook#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d:   <http://learningsparql.com/ns/data#> .
+#@prefix dm:  <http://learningsparql.com/ns/demo#> .
+
+traj:transport1 traj:material_name "name" ;
+				traj:material_id "id" ;
+				traj:source _:n1 ;
+				traj:destination _:n2 ;
+				traj:quantity "data"^^xsd:decimal ;
+				traj:units "data" ;
+				traj:methodOfTransport "data" ;
+				traj:distaneTravelled "data"^^xsd:decimal ;
+				traj:truckCapacity "data"^^xsd:decimal ;
+				traj:actualLoad "data"^^xsd:integer ;
+				traj:returnsEmpty "true"^^xsd:boolean ;
+
+_:n1	traj:neighborhood "data" ;
+		traj:latitude "data"^^xsd:decimal ;
+		traj:longtitude "data"^^xsd:decimal ;
+		traj:region "radius for example"^^xsd:decimal ;
+		traj:region_units "miles" .
+		
+_:n2	traj:neighborhood "data" ;
+		traj:latitude "data"^^xsd:decimal ;
+		traj:longtitude "data"^^xsd:decimal ;
+		traj:region "radius for example"^^xsd:decimal ;
+		traj:region_units "miles" .

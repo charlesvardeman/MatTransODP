@@ -1,0 +1,99 @@
+# filename: material.ttl
+
+@prefix m: <http://learningsparql.com/ns/addressbook#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d:   <http://learningsparql.com/ns/data#> .
+
+m:material1 m:name "name" ;
+			m:type "aggregate" ;
+			m:state "raw" ;
+            m:properties _:p1 .
+			
+_:p1	m:amount	"data"^^xsd:decimal ;
+		m:source	"data" ;
+		m:energy	"data"^^xsd:decimal ;
+		m:units		"data" .
+
+m:material2 m:name "name" ;
+			m:type "polymer" ;
+			m:state "raw" ;
+            m:properties _:p2 .
+			
+_:p2	m:amount	"data"^^xsd:decimal ;
+		m:source	"data" ;
+		m:energy	"data"^^xsd:decimal ;
+		m:units		"data" .
+
+
+
+
+
+
+
+
+		
+# 	This is an example with all of the other data put into the example:
+#   But also how do you work in data sourcing/references?
+#	Also how to deal with unit conversions??? separate entries for density, etc.?
+
+m:material1 m:name  "name" ;
+			m:type  "aggregate" ;
+			m:state "raw" ;
+			m:source	_:na ;
+			m:manufacturer	_:manuf1 ;
+            m:property _:p1 .
+			
+_:na 	m:neighborhood "data" ;
+		m:latitude 	   "data"^^xsd:decimal ;
+		m:longtitude   "data"^^xsd:decimal ;
+		m:region       "radius for example"^^xsd:decimal .
+
+_:manuf1 m:manuf_name	"KeurtConcrete" ; 	
+		m:amount		"data"^^xsd:decimal ;
+		m:source_units	"kg/unit" ;
+		m:energy		"data"^^xsd:decimal ;
+		m:no_of_units   "data"^^xsd:decimal ;
+		m:unit_cost		"cost_per_unit"^^xsd:decimal ;
+		m:currency		"US_dollars" 
+		m:life_expectancy "100" ;
+		m:maintenance_factor "0" .
+			
+_:p1	# Values Below are 
+		m:construction_id	"air_construction" ;
+		m:construction_name	"AirSpace" ;
+		m:u_value	"0.610"^^xsd:decimal ;
+		m:u_value_unit	"WPerSquareMeterK" ;
+		m:absorptance	"0"^^xsd:decimal ;
+		m:absorptance_unit	"Fraction" ;
+		m:absorptance_type	"VerySmooth" ;
+		m:roughness "0"^^xsd:decimal ;
+		m:roughness_unit "None" ;
+		m:layer_id "AirSpace" ;
+		m:material_id "AirSpace" ;
+		m:r_value "1.639"^^xsd:decimal ;
+		m:r_value_unit "SquareMeterKPerW" ;
+		m:thickness "0"^^xsd:decimal ;
+		m:thickness_unit "Meters" ;
+		m:conductivity "0.0271"^^xsd:decimal ;
+		m:conductivity_unit "WPerMeterK" ;
+		m:density "1.127"^^xsd:decimal ;
+		m:density_unit "KgPerCubicM" ;
+		m:specific_heat "1.005"^^xsd:decimal ;
+		m:specific_heat_unit "JPerKgK" ;
+		#m:C_value "new_material.density * new_material.specific_heat * new_material.thickness"^^xsd:decimal ;
+		m:C_Total "0"^^xsd:decimal ;
+		m:window_id "data" ;
+		m:window_description "description" ;
+		m:transmittance "data"^^xsd:decimal ;
+		m:transmittance_unit "Fraction" ;
+		m:transmittance_type "Visible" ;
+		m:solarIncidentAngle "***From the Lookup File???" ;
+		m:check_if_window	"true"^^xsd:boolean ;
+		m:embodied_energy	"0"^^xsd:decimal ;
+		m:embodied_energy_unit	"BTU/lb" ;
+		m:embodied_water	"0"^^xsd:decimal ;
+		m:embodied_water_unit	"GAL/lb" .
+		
+				
+						
+				
