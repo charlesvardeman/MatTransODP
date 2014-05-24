@@ -1,0 +1,85 @@
+# filename: material.ttl
+
+@prefix Ingredients: <@prefix BakeACake: <http://CakeExample.com/Ingredients#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix u:   <http://learningsparql.com/ns/units#> .
+
+Ingredients:sugar Ingredients:name  "granulated sugar" ;
+			      Ingredients:type  "white" ;
+			      Ingredients:state "granulated" ;
+                  Ingredients:properties _:p1 .
+			
+_:p1	Ingredients:amount	"5"^^xsd:integer ;
+		Ingredients:source	"cupboard" ;
+		Ingredients:energy	"none"^^u:kWhyear ;
+		Ingredients:units	"pounds" .
+
+Ingredients:butter Ingredients:name  "salted butter" ;
+			       Ingredients:type  "salted" ;
+			       Ingredients:state "churned" ;
+                   Ingredients:properties _:p1 .
+			
+_:p1	Ingredients:amount	"1"^^xsd:integer ;
+		Ingredients:source	"refrigerator" ;
+		Ingredients:energy	"500"^^u:kWhyear ; 
+		Ingredients:units	"pounds" .
+		
+Ingredients:egg Ingredients:name  "brown eggs" ;
+			    Ingredients:type  "brown" ;
+			    Ingredients:state "raw" ;
+                Ingredients:properties _:p1 .
+			
+_:p1	Ingredients:amount	"1"^^xsd:integer ;
+		Ingredients:source	"refrigerator" ;
+		Ingredients:energy	"500"^^u:kWhyear ; 
+		Ingredients:units	"dozen" .		
+		
+Ingredients:vanilla Ingredients:name  "pure vanilla extract" ;
+			        Ingredients:type  "pure" ;
+					Ingredients:state "extract" ;
+					Ingredients:properties _:p1 .
+			
+_:p1	Ingredients:amount	"8"^^xsd:integer ;
+		Ingredients:source	"cupboard" ;
+		Ingredients:energy	"none"^^u:kWhyear ;
+		Ingredients:units	"ounces" .		
+		
+Ingredients:flour Ingredients:name  "all-purpose flour" ;
+			      Ingredients:type  "all-purpose" ;
+				  Ingredients:state "processed" ;
+				  Ingredients:properties _:p1 .
+			
+_:p1	Ingredients:amount	"5"^^xsd:integer ;
+		Ingredients:source	"cupboard" ;
+		Ingredients:energy	"none"^^u:kWhyear ;
+		Ingredients:units	"pounds" .
+		
+Ingredients:baking_powder Ingredients:name  "baking powder" ;
+						Ingredients:type  "generic" ;
+						Ingredients:state "processed" ;
+						Ingredients:properties _:p1 .
+			
+_:p1	Ingredients:amount	"5"^^xsd:integer ;
+		Ingredients:source	"cupboard" ;
+		Ingredients:energy	"none"^^u:kWhyear ;
+		Ingredients:units	"ounces" .
+		
+Ingredients:milk Ingredients:name  "whole milk" ;
+				 Ingredients:type  "whole" ;
+				 Ingredients:state "pasteurized" ;
+				 Ingredients:properties _:p1 .
+			
+_:p1	Ingredients:amount	"1"^^xsd:integer ;
+		Ingredients:source	"refrigerator" ;
+		Ingredients:energy	"500"^^u:kWhyear ; 
+		Ingredients:units	"gallon" .
+
+
+# Will the catalyst item actually be in this format too?		
+	
+				 
+				 
+				 
+				 
+				 
+				 
