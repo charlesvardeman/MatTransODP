@@ -12,7 +12,7 @@ Batter:inputs Batter:sugar "1 cup sugar" ;
 			  Batter:baking_power "1-3/4 teaspoons baking powder" ;
 			  Batter:milk "1/2 cup milk" .
 				 
-Batter:energy Batter:electricity "wall outlet" ;
+Batter:energy Batter:electricity "wall outlet" .
 
 Batter:catalyst Batter:measuring_tools "measuring cups" ;
                 Batter:measuring_tools "measuring spoons" ;

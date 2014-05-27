@@ -1,6 +1,6 @@
 # filename: material.ttl
 
-@prefix Ingredients: <@prefix BakeACake: <http://CakeExample.com/Ingredients#> .
+@prefix Ingredients: <http://CakeExample.com/Ingredients#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix u:   <http://learningsparql.com/ns/units#> .
 

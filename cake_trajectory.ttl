@@ -1,6 +1,6 @@
 # filename: trajectory.ttl
 
-@prefix Shopping: <http://learningsparql.com/ns/addressbook#> .
+@prefix Shopping: <http://ConcreteExample.com/Shopping#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix u:   <http://learningsparql.com/ns/units#> .
 
@@ -13,7 +13,7 @@ Shopping:grocerystore_home Shopping:item_name "groceries" ;
 						   Shopping:actualLoad "18"^^xsd:integer^^u:pounds ;
 						   Shopping:returnsEmpty "true"^^xsd:boolean .
 
-_:n2 Shopping:name "grocerystore" ;
+_:n1 Shopping:name "grocerystore" ;
     Shopping:latitude "storex"^^xsd:decimal ;
 	Shopping:longitude "storey"^^xsd:decimal ;
 	Shopping:time "00:00:00:00:00:00"

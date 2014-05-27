@@ -1,0 +1,78 @@
+# filename: concrete_trajectory.ttl
+
+@prefix trucking: <http://ConcreteExample.com/trucking#> .
+@prefix pumping: <http://ConcreteExample.com/pumping#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix u:   <http://learningsparql.com/ns/units#> .
+
+pumping:get_water pumping:item_name "water" ;
+				pumping:source _:n1 ;
+				pumping:destination _:n2 ;
+				pumping:methodOfTransport "hose" ;
+				pumping:distanceTravelled "10"^^xsd:decimal^^u:meters ;
+				pumping:vehicleCapacity "10"^^xsd:decimal^^u:GPM ;
+				pumping:actualLoad "15"^^xsd:integer^^u:pounds ;
+				pumping:returnsEmpty "true"^^xsd:boolean .
+
+_:n2 pumping:name "underground" ;
+    pumping:latitude "sitetapx"^^xsd:decimal ;
+	pumping:longitude "sitetapy"^^xsd:decimal ;
+	pumping:time "00:00:00:00:00:00"
+	pumping:points "set of points defining neighborhood boundary" .
+						   
+_:n2 pumping:name "site" ;
+    pumping:latitude "homex"^^xsd:decimal ;
+	pumping:longitude "homey"^^xsd:decimal ;
+	pumping:time "00:00:00:00:00:0"
+	pumping:points "set of points defining neighborhood boundary" .
+	
+	
+	
+	
+trucking:get_cement trucking:item_name "cement" ;
+				trucking:source _:n1 ;
+				trucking:destination _:n2 ;
+				trucking:methodOfTransport "truck" ;
+				trucking:distanceTravelled "10"^^xsd:decimal^^u:miles ;
+				trucking:vehicleCapacity "400"^^xsd:decimal^^u:pounds ;
+				trucking:actualLoad "15"^^xsd:integer^^u:pounds ;
+				trucking:returnsEmpty "true"^^xsd:boolean .
+
+_:n2 trucking:name "pick-up" ;
+    trucking:latitude "storex"^^xsd:decimal ;
+	trucking:longitude "storey"^^xsd:decimal ;
+	trucking:time "00:00:00:00:00:00"
+	trucking:points "set of points defining neighborhood boundary" .
+						   
+_:n2 trucking:name "site" ;
+    trucking:latitude "sitex"^^xsd:decimal ;
+	trucking:longitude "sitey"^^xsd:decimal ;
+	trucking:time "00:00:00:00:00:00"
+	trucking:points "set of points defining neighborhood boundary" .
+
+	
+	
+	
+trucking:get_additive trucking:item_name "none" ;
+				trucking:source _:n1 ;
+				trucking:destination _:n2 ;
+				trucking:methodOfTransport "none" ;
+				trucking:distanceTravelled "0"^^xsd:decimal^^u:meters ;
+				trucking:vehicleCapacity "0"^^xsd:decimal^^u:GPM ;
+				trucking:actualLoad "0"^^xsd:integer^^u:pounds ;
+				trucking:returnsEmpty "true"^^xsd:boolean .
+
+_:n2 trucking:name "none" ;
+    trucking:latitude "none"^^xsd:decimal ;
+	trucking:longitude "none"^^xsd:decimal ;
+	trucking:time "00:00:00:00:00:00"
+	trucking:points "set of points defining neighborhood boundary" .
+						   
+_:n2 trucking:name "none" ;
+    trucking:latitude "none"^^xsd:decimal ;
+	trucking:longitude "none"^^xsd:decimal ;
+	trucking:time "00:00:00:00:00:0"
+	trucking:points "set of points defining neighborhood boundary" .
+
+	
+	
