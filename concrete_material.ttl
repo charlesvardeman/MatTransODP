@@ -1,0 +1,38 @@
+# filename: concrete_material.ttl
+
+@prefix mix: <http://ConcreteExample.com/mix#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix u:   <http://learningsparql.com/ns/units#> .
+
+mix:water mix:name  "water" ;
+		  mix:type  "underground" ;
+		  mix:state "cold" ;
+          mix:properties _:p1 .
+			
+_:p1	mix:amount	"15"^^xsd:integer ;
+		mix:source	"ground" ;
+		mix:energy	"none"^^u:kWhyear ;
+		mix:units	"pounds" .
+
+mix:cement mix:name  "cement" ;
+		   mix:type  "packaged" ;
+		   mix:state "dry" ;
+           mix:properties _:p1 .
+			
+_:p1	mix:amount	"60"^^xsd:integer ;
+		mix:source	"manufacturer" ;
+		mix:energy	"0"^^u:kWhyear ; 
+		mix:units	"pounds" .
+			 
+mix:additive mix:name  "none" ;
+		     mix:type  "none" ;
+		     mix:state "none" ;
+             mix:properties _:p1 .
+			
+_:p1	mix:amount	"0"^^xsd:integer ;
+		mix:source	"refrigerator" ;
+		mix:energy	"0"^^u:kWhyear ; 
+		mix:units	"pounds" .	 
+				 
+				 
+				 

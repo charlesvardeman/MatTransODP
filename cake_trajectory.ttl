@@ -1,0 +1,29 @@
+# filename: trajectory.ttl
+
+@prefix Shopping: <http://ConcreteExample.com/Shopping#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix u:   <http://learningsparql.com/ns/units#> .
+
+Shopping:grocerystore_home Shopping:item_name "groceries" ;
+						   Shopping:source _:n1 ;
+						   Shopping:destination _:n2 ;
+						   Shopping:methodOfTransport "car" ;
+						   Shopping:distanceTravelled "10.5"^^xsd:decimal^^u:miles ;
+						   Shopping:vehicleCapacity "500.0"^^xsd:decimal^^u:miles ;
+						   Shopping:actualLoad "18"^^xsd:integer^^u:pounds ;
+						   Shopping:returnsEmpty "true"^^xsd:boolean .
+
+_:n1 Shopping:name "grocerystore" ;
+    Shopping:latitude "storex"^^xsd:decimal ;
+	Shopping:longitude "storey"^^xsd:decimal ;
+	Shopping:time "00:00:00:00:00:00"
+	Shopping:points "set of points defining neighborhood boundary" .
+						   
+_:n2 Shopping:name "home" ;
+    Shopping:latitude "homex"^^xsd:decimal ;
+	Shopping:longitude "homey"^^xsd:decimal ;
+	Shopping:time "00:00:00:00:00:00"
+	Shopping:points "set of points defining neighborhood boundary" .
+
+
+

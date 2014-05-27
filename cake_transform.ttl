@@ -1,0 +1,58 @@
+# filename: transform.ttl
+
+@prefix Batter:<http://CakeExample.com/Batter#> .
+@prefix BakeACake: <http://CakeExample.com/BakeACake#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+Batter:inputs Batter:sugar "1 cup sugar" ;
+		      Batter:butter "1/2 cup butter" ;
+			  Batter:egg "2 eggs" ;
+			  Batter:vanilla "2 teaspoons vanilla extract" ;
+			  Batter:flour "1-1/2 cups flour" ;
+			  Batter:baking_power "1-3/4 teaspoons baking powder" ;
+			  Batter:milk "1/2 cup milk" .
+				 
+Batter:energy Batter:electricity "wall outlet" .
+
+Batter:catalyst Batter:measuring_tools "measuring cups" ;
+                Batter:measuring_tools "measuring spoons" ;
+                Batter:mixer "electric mixer" ;
+				   
+Batter:outputs Batter:batter "cake batter" ;
+               Batter:trash "ingredient waste" .
+			   
+Batter:neighborhood Batter:name "home" ;
+		            Batter:latitude "homex"^^xsd:decimal ;
+		            Batter:longitude "homey"^^xsd:decimal ;
+		            Batter:time "00:00:00:00:00:00"
+		            Batter:points "set of points defining neighborhood boundary" .
+
+		  
+				  
+				  
+BakeACake:inputs BakeACake:batter "cake batter" .
+				 
+BakeACake:energy BakeACake:heat "350 degrees F" ;
+				 BakeACake:heat "175 degrees C" .
+
+BakeACake:catalyst BakeACake:pan "2 9-inch round pans" ;
+				   BakeACake:oven "conventional oven" ;
+				   BakeACake:time "1 hour" .
+
+BakeACake:outputs BakeACake:cake "cooked cake" ;
+                  BakeAcake:steam "released steam" ;
+				  BakeAcake:aroma "cake aroma" .
+				  
+BakeACake:neighborhood BakeACake:name "home" ;
+		               BakeACake:latitude "homex"^^xsd:decimal ;
+		               BakeACake:longitude "homey"^^xsd:decimal ;
+		               BakeACake:time "00:00:00:00:00:00
+		               BakeACake:points "set of points defining neighborhood boundary" .
+					   
+					   
+					   
+					   
+					   
+					   
+					   
+					   
