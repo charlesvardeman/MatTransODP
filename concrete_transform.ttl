@@ -1,0 +1,59 @@
+# filename: concrete_transform.ttl
+
+@prefix mixConcrete:<http://ConcreteExample.com/mixConcrete#> .
+@prefix pourConcrete: <http://ConcreteExample.com/pourConcrete#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix u:   <http://learningsparql.com/ns/units#> .
+
+mixConcrete:inputs mixConcrete:sugar "concrete" ;
+		      mixConcrete:butter "water" ;
+			  mixConcrete:egg "additive" .
+				 
+mixConcrete:energy mixConcrete:electricity "outlet" ;
+				   mixConcrete:labor "manual" .
+
+mixConcrete:catalyst mixConcrete:measuring_tools "gallon buckets" ;
+                mixConcrete:industrial_mixer "POWER-GEN concrete mixer" ;
+                mixConcrete:reservoir "water_reservoir" ;
+				mixConcrete:mixing_tools "shovel" .
+				   
+mixConcrete:outputs mixConcrete:concrete "standard ready-to-pour concrete" ;
+					mixConcrete:excess "water.
+			   
+mixConcrete:neighborhood mixConcrete:site "site" ;
+		            mixConcrete:latitude "sitex"^^xsd:decimal ;
+		            mixConcrete:longitude "sitey"^^xsd:decimal ;
+		            mixConcrete:time "00:00:00:00:00:00"
+		            mixConcrete:points "set of points defining neighborhood boundary" .
+
+		  
+				  
+				  
+pourConcrete:inputs pourConcrete:concrete "standard ready-to-pour concrete" .
+				 
+pourConcrete:energy pourConcrete:labor "manual" ;
+				    pourConcrete:electricity "outlet" .
+
+pourConcrete:catalyst pourConcrete:forms "form work" ;
+					  pourConcrete:industrial_mixer "POWER-GEN concrete mixer" ;
+					  pourConcrete:shoot "concrete shoot" ;
+					  pourConcrete:mixing_tools "shovel" ;
+					  pourConcrete:concrete_tools "float" ;
+					  pourConcrete:concrete_tools "hand trowel" .
+
+pourConcrete:outputs pourConcrete:slab "concrete slab" ;
+                  pourConcrete:finish "coarse" .
+				  
+pourConcrete:neighborhood pourConcrete:name "site" ;
+		               pourConcrete:latitude "sitex"^^xsd:decimal ;
+		               pourConcrete:longitude "sitey"^^xsd:decimal ;
+		               pourConcrete:time "00:00:00:00:00:00
+		               pourConcrete:points "set of points defining neighborhood boundary" .
+					   
+					   
+					   
+					   
+					   
+					   
+					   
+					   
