@@ -1,0 +1,113 @@
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation> .
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation> rdf:type :Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#hasInput
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#hasInput> rdf:type :ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#hasOutput
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#hasOutput> rdf:type :ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#partOf
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#partOf> rdf:type :ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Artifact
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Artifact> rdf:type :Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Material> .
+
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Byproduct
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Byproduct> rdf:type :Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Material> .
+
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Catalyst
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Catalyst> rdf:type :Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Material> ;
+                                                                                        
+                                                                                        :disjointWith <http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Resource> .
+
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Energy
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Energy> rdf:type :Class .
+
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Material
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Material> rdf:type :Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf [ rdf:type :Restriction ;
+                                                                                                          :onProperty <http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#partOf> ;
+                                                                                                          :someValuesFrom <http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Neighborhood>
+                                                                                                        ] ;
+                                                                                        
+                                                                                        :disjointWith <http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#MaterialTransformation> .
+
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#MaterialTransformation
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#MaterialTransformation> rdf:type :Class .
+
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Neighborhood
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Neighborhood> rdf:type :Class .
+
+
+
+###  http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Resource
+
+<http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Resource> rdf:type :Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/cvardema/ontologies/2014/4/materialtransformation#Material> .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
