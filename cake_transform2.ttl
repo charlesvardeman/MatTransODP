@@ -1,0 +1,133 @@
+# filename: transform.ttl
+
+@prefix batterTransformation:<http://CakeExample.com/batterTransformation#> .
+@prefix BakeACake: <http://CakeExample.com/BakeACake#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:batterTransformation 	a							:MaterialTransformation ;
+						:hasInput					:Resource1, :Resource2, :Resource3, :Resource4, :Resource5, :Resource6, Resource7 ;
+						:hasInput					:Catalyst1, :Catalyst2, :Catalyst3, :Catalyst4 ;
+						:hasDuration				:OWL:time ;
+						:hasOutput					:Artifact1, :ByProduct1 ;
+
+						
+						
+:Resource1				:a							:Resource ;
+						:isA	 					:Material1 ;
+:Material1				a							:Material ;
+						a							:sugar:"1 cup sugar" ;	
+
+:Resource2				:a							:Resource ;
+						:isA	 					:Material2 ;
+:Material2				a							:Material ;
+						a							:butter:"1/2 cup butter" ;
+						
+:Resource3				:a							:Resource ;
+						:isA	 					:Material3 ;
+:Material3				a							:Material ;
+						a							:egg:"2 eggs" ;
+							
+:Resource4				:a							:Resource ;
+						:isA	 					:Material4 ;
+:Material4				a							:Material ;
+						a							:vanilla:"2 teaspoons vanilla extract" ;
+
+:Resource5				:a							:Resource ;
+						:isA	 					:Material5 ;
+:Material5				a							:Material ;
+						a							:flour:"1-1/2 cups flour" ;
+
+:Resource6				:a							:Resource ;
+						:isA	 					:Material6 ;
+:Material6				a							:Material ;
+						a							:baking_power:"1-3/4 teaspoons baking powder" ;
+
+:Resource7				:a							:Resource ;
+						:isA	 					:Material7 ;
+:Material7				a							:Material ;
+						a							:milk:"1/2 cup milk" ;						
+						
+						
+
+:Catalyst1				:consumes				    :Work/Energy
+						
+:Catalyst2				:a							:Catalyst ;
+						:isA	 					:MaterialA ;
+:MaterialA				a							:electricity:"wall outlet" ;	
+
+:Catalyst3				:a							:Catalyst ;
+						:isA	 					:MaterialB ;
+:MaterialB				a							:measuring_tools:"measuring cups" ;	
+
+:Catalyst3				:a							:Catalyst ;
+						:isA	 					:MaterialC ;
+:MaterialC				a							:measuring_tools:"measuring spoons" ;	
+
+:Catalyst4				:a							:Catalyst ;
+						:isA	 					:MaterialD ;
+:MaterialD				a							:mixer:"electric mixer" ;					
+						
+:Artifact1				a							:Artifact ;
+						:hasOutput					:batter ;
+						
+:ByProduct1				a							:ByProduct ;
+						:hasOutput					:trash ;		
+						
+:OWL:time				a							:hour ;
+						
+						
+						
+						
+						
+#Batter:inputs Batter:sugar "1 cup sugar" ;
+#		      Batter:butter "1/2 cup butter" ;
+#			  Batter:egg "2 eggs" ;
+#			  Batter:vanilla "2 teaspoons vanilla extract" ;
+#			  Batter:flour "1-1/2 cups flour" ;
+#			  Batter:baking_power "1-3/4 teaspoons baking powder" ;
+#			  Batter:milk "1/2 cup milk" .
+#				 
+#Batter:energy Batter:electricity "wall outlet" .
+#
+#Batter:catalyst Batter:measuring_tools "measuring cups" ;
+#                Batter:measuring_tools "measuring spoons" ;
+#               Batter:mixer "electric mixer" ;
+#				   
+#Batter:outputs Batter:batter "cake batter" ;
+#               Batter:trash "ingredient waste" .
+#			   
+#Batter:neighborhood Batter:name "home" ;
+#		            Batter:latitude "homex"^^xsd:decimal ;
+#		            Batter:longitude "homey"^^xsd:decimal ;
+#		            Batter:time "00:00:00:00:00:00"
+#		            Batter:points "set of points defining neighborhood boundary" .
+
+		  
+				  
+				  
+#BakeACake:inputs BakeACake:batter "cake batter" .
+#				 
+#BakeACake:energy BakeACake:heat "350 degrees F" ;
+#				 BakeACake:heat "175 degrees C" .
+#
+#BakeACake:catalyst BakeACake:pan "2 9-inch round pans" ;
+#				   BakeACake:oven "conventional oven" ;
+#				   BakeACake:time "1 hour" .
+#
+#BakeACake:outputs BakeACake:cake "cooked cake" ;
+#                  BakeAcake:steam "released steam" ;
+#				  BakeAcake:aroma "cake aroma" .
+#				  
+#BakeACake:neighborhood BakeACake:name "home" ;
+#		               BakeACake:latitude "homex"^^xsd:decimal ;
+#		               BakeACake:longitude "homey"^^xsd:decimal ;
+#		               BakeACake:time "00:00:00:00:00:00
+#		               BakeACake:points "set of points defining neighborhood boundary" .
+					   
+					   
+					   
+					   
+					   
+					   
+					   
+					   

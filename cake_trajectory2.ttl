@@ -1,0 +1,64 @@
+# filename: trajectory.ttl
+
+@prefix shoppingTrajectory: <http://CakeExample.com/shoppingTrajectory#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix u:   <http://learningsparql.com/ns/units#> .
+
+:shoppingTrajectory 	a							:SemanticTrajectory ;
+						:hasSegment					:segment1 ;
+						:hasFix						:fix1, :fix2 ;
+						
+:meansOfTransport		a							foaf:Person ;
+
+:methodOfTransport		a							:MotionP:MovingObject ;
+
+:store					a							POI:Place ;
+						POI:hasSpatialFootprint		:pos1 ;
+
+:home					a							POI:Place ;
+						POI:hasSpatialFootprint		:pos2 ;
+
+:segment1				a 				:segment ;
+						:startsFrom		:fix1 ;
+						:endsAt			:fix2 ;
+						:isTraversedBy	:car ;
+				
+:fix1					a				:Fix ;
+						:inXSDDataTime	:2014-01-01T12:00:00Z ;
+						:hasLocation	:pos1 ;
+
+:pos1					a				:Position ;
+						:geo:astWKT		Point(x1, y1) ;
+
+:fix2					a				:Fix ;
+						:inXSDDataTime	:2014-01-01T13:00:00Z ;
+						:hasLocation	:pos2 ;
+
+:pos2					a				:Position ;
+						:geo:astWKT		Point(x2, y2) ;
+
+
+
+#shoppingTrajectory:item_name "groceries" ;
+#					shoppingTrajectory:source _:n1 ;
+#					shoppingTrajectory:destination _:n2 ;
+#					shoppingTrajectory:methodOfTransport "car" ;
+#					shoppingTrajectory:distanceTravelled "10.5"^^xsd:decimal^^u:miles ;
+#					shoppingTrajectory:vehicleCapacity "500.0"^^xsd:decimal^^u:miles ;
+#					shoppingTrajectory:actualLoad "18"^^xsd:integer^^u:pounds ;
+#					shoppingTrajectory:returnsEmpty "true"^^xsd:boolean .
+#
+#_:n1 shoppingTrajectory:name "grocerystore" ;
+#    shoppingTrajectory:latitude "storex"^^xsd:decimal ;
+#	shoppingTrajectory:longitude "storey"^^xsd:decimal ;
+#	shoppingTrajectory:time "00:00:00:00:00:00"
+#	shoppingTrajectory:points "set of points defining neighborhood boundary" .
+#						   
+#_:n2 shoppingTrajectory:name "home" ;
+#    shoppingTrajectory:latitude "homex"^^xsd:decimal ;
+#	shoppingTrajectory:longitude "homey"^^xsd:decimal ;
+#	shoppingTrajectory:time "00:00:00:00:00:00"
+#	shoppingTrajectory:points "set of points defining neighborhood boundary" .
+
+
+
