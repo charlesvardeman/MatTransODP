@@ -3,39 +3,43 @@
 @prefix shoppingTrajectory: <http://CakeExample.com/shoppingTrajectory#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix u:   <http://learningsparql.com/ns/units#> .
+@prefix rdfs: <http://www.w3.org/2001/01/rdf-schema#> .
+@prefix measure: <http://kilosandcups.info/us_customary#> .
 
 :shoppingTrajectory 	a							:SemanticTrajectory ;
 						:hasSegment					:segment1 ;
-						:hasFix						:fix1, :fix2 ;
+						:hasFix						:fix1, :fix2 .
 						
-:meansOfTransport		a							foaf:Person ;
+:meansOfTransport		a							foaf:Person .
 
-:methodOfTransport		a							:MotionP:MovingObject ;
+:methodOfTransport		a							:MotionP:MovingObject ; 
+						a							_:gas ;
+_:gas					:hasGallonCost			   [rdf:value "5.0"^^xsd:decimal ; exterms:units unit:dollars ] .
 
 :store					a							POI:Place ;
-						POI:hasSpatialFootprint		:pos1 ;
+						POI:hasSpatialFootprint		:pos1 .
 
 :home					a							POI:Place ;
-						POI:hasSpatialFootprint		:pos2 ;
+						POI:hasSpatialFootprint		:pos2 .
 
 :segment1				a 				:segment ;
 						:startsFrom		:fix1 ;
 						:endsAt			:fix2 ;
-						:isTraversedBy	:car ;
+						:isTraversedBy	:car .
 				
 :fix1					a				:Fix ;
 						:inXSDDataTime	:2014-01-01T12:00:00Z ;
-						:hasLocation	:pos1 ;
+						:hasLocation	:pos1 .
 
 :pos1					a				:Position ;
-						:geo:astWKT		Point(x1, y1) ;
+						:geo:astWKT		Point(x1, y1) .
 
 :fix2					a				:Fix ;
 						:inXSDDataTime	:2014-01-01T13:00:00Z ;
-						:hasLocation	:pos2 ;
+						:hasLocation	:pos2 .
 
 :pos2					a				:Position ;
-						:geo:astWKT		Point(x2, y2) ;
+						:geo:astWKT		Point(x2, y2) .
 
 
 

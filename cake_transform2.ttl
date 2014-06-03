@@ -3,69 +3,81 @@
 @prefix batterTransformation:<http://CakeExample.com/batterTransformation#> .
 @prefix BakeACake: <http://CakeExample.com/BakeACake#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2001/01/rdf-schema#> .
+@prefix u:   <http://learningsparql.com/ns/units#> .
+@prefix measure: <http://kilosandcups.info/us_customary#> .
+
 
 :batterTransformation 	a							:MaterialTransformation ;
 						:hasInput					:Resource1, :Resource2, :Resource3, :Resource4, :Resource5, :Resource6, Resource7 ;
 						:hasInput					:Catalyst1, :Catalyst2, :Catalyst3, :Catalyst4 ;
 						:hasDuration				:OWL:time ;
-						:hasOutput					:Artifact1, :ByProduct1 ;
-
-						
+						:hasOutput					:Artifact1, :ByProduct1 .	
 						
 :Resource1				:a							:Resource ;
-						:isA	 					:Material1 ;
-:Material1				a							:Material ;
-						a							:sugar:"1 cup sugar" ;	
+						:isA	 					:Material1 .
+:Material1:sugar		a							:Material ;
+						a							_:m1 .
+_:m1					measure:cp					"1.0" .				
 
 :Resource2				:a							:Resource ;
-						:isA	 					:Material2 ;
-:Material2				a							:Material ;
-						a							:butter:"1/2 cup butter" ;
+						:isA	 					:Material2 .
+:Material2:butter		a							:Material ;
+						a							_:m2 .
+_:m2					measure:cp					"0.5" .			
 						
 :Resource3				:a							:Resource ;
-						:isA	 					:Material3 ;
-:Material3				a							:Material ;
-						a							:egg:"2 eggs" ;
+						:isA	 					:Material3 .
+:Material3:egg			a							:Material ;
+						a							_:m3 .
+_:m3					measure:Tbsp					"8.0" .			
 							
 :Resource4				:a							:Resource ;
-						:isA	 					:Material4 ;
-:Material4				a							:Material ;
-						a							:vanilla:"2 teaspoons vanilla extract" ;
+						:isA	 					:Material4 .
+:Material4:vanilla		a							:Material ;
+						a							_:m4 .
+_:m4					measure:tsp					"2.0" .			
 
 :Resource5				:a							:Resource ;
-						:isA	 					:Material5 ;
-:Material5				a							:Material ;
-						a							:flour:"1-1/2 cups flour" ;
+						:isA	 					:Material5 .
+:Material5:flour		a							:Material ;
+						a							_:m5 .
+_:m5					measure:cp					"1.5" .			
 
-:Resource6				:a							:Resource ;
-						:isA	 					:Material6 ;
-:Material6				a							:Material ;
-						a							:baking_power:"1-3/4 teaspoons baking powder" ;
+:Resource6					:a							:Resource ;
+							:isA	 					:Material6 .
+:Material6:baking_powder	a							:Material ;
+							a							_:m6 .
+_:m6						measure:tsp					"1.75" .			
 
 :Resource7				:a							:Resource ;
-						:isA	 					:Material7 ;
-:Material7				a							:Material ;
-						a							:milk:"1/2 cup milk" ;						
+						:isA	 					:Material7 .
+:Material7:milk			a							:Material ;
+						a							_:m7 .
+_:m7					measure:cp					"0.5" .									
 						
 						
 
-:Catalyst1				:consumes				    :Work/Energy
-						
-:Catalyst2				:a							:Catalyst ;
-						:isA	 					:MaterialA ;
-:MaterialA				a							:electricity:"wall outlet" ;	
+:Catalyst1			a					    :Catalyst ;
+ 					a					    _:electricity ;
+					:consumes				:Work/Energy .
+_:electricity		:hasCost				[rdf:value "1.0"^^xsd:decimal ; exterms:units unit:kWh ] .
 
-:Catalyst3				:a							:Catalyst ;
-						:isA	 					:MaterialB ;
-:MaterialB				a							:measuring_tools:"measuring cups" ;	
+:Catalyst2			a					    :Catalyst ;
+ 					a					    _:electric_mixer ;
+					:isA				    :Material7 .
+_:electric_mixer	measure:gal				 "1.0" .
 
-:Catalyst3				:a							:Catalyst ;
-						:isA	 					:MaterialC ;
-:MaterialC				a							:measuring_tools:"measuring spoons" ;	
+:Catalyst3			a					    :Catalyst ;
+ 					a					    _:measuring_spoons ;
+					:isA				    :Material8 .
+_:measuring_spoons	measure:Tbsp		    "1.0" ;
+				    measure:tsp				"1.0" .
 
-:Catalyst4				:a							:Catalyst ;
-						:isA	 					:MaterialD ;
-:MaterialD				a							:mixer:"electric mixer" ;					
+:Catalyst4			a					    :Catalyst ;
+ 					a					    _:measuring_cups ;
+					:isA				    :Material9 .
+_:measuring_cups	measure:cp				    	"1.0" .
 						
 :Artifact1				a							:Artifact ;
 						:hasOutput					:batter ;
@@ -73,7 +85,7 @@
 :ByProduct1				a							:ByProduct ;
 						:hasOutput					:trash ;		
 						
-:OWL:time				a							:hour ;
+:OWL:time				a							:half-hour ;
 						
 						
 						
@@ -102,7 +114,52 @@
 #		            Batter:time "00:00:00:00:00:00"
 #		            Batter:points "set of points defining neighborhood boundary" .
 
-		  
+#####################################################################################################################################################################################		  
+
+
+:batterTransformation 	a							:MaterialTransformation ;
+						:hasInput					:Resource1 ;
+						:hasInput					:Catalyst1, :Catalyst2 ;
+						:hasDuration				:OWL:time ;
+						:hasOutput					:Artifact1, :ByProduct1, ByProduct2 .	
+						
+:Resource1				:a							:Resource ;
+						:isA	 					:Material1 .
+:Material1:batter		a							:Material .			
+
+
+
+						
+
+:Catalyst1			a					    :Catalyst ;
+ 					a					    _:electricity ;
+					:consumes				:Work/Energy .
+_:electricity		:hasCost				[rdf:value "2.0"^^xsd:decimal ; exterms:units unit:kWh ] .
+
+
+:Catalyst2			a					    :Catalyst ;
+ 					a					    _:oven ;
+					:isA				    :Material2 .
+_:oven				:hasTemerature		    [rdf:value "350.0"^^xsd:decimal ; exterms:units unit:F ] .
+
+:Catalyst3			a					    :Catalyst ;
+ 					a					    _:pans ;
+					:isA				    :Material3 .
+_:pans				measure:in				"9.0" .
+
+						
+:Artifact1				a							:Artifact ;
+						:hasOutput					:cake ;
+						
+:ByProduct1				a							:ByProduct ;
+						:hasOutput					:cake_aroma ;
+
+:ByProduct1				a							:ByProduct ;
+						:hasOutput					:steam ;			
+						
+:OWL:time				a							:hour ;
+
+
 				  
 				  
 #BakeACake:inputs BakeACake:batter "cake batter" .
